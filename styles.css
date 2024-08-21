@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
     display: flex;
     justify-content: center;
@@ -21,6 +19,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    animation: slide-in-top 1s ease-out; /* 슬라이드 애니메이션 추가 */
 }
 
 .invitation {
@@ -54,4 +53,31 @@ body {
 
 .flip {
     animation: flip-2-hor-top-fwd 0.8s forwards;
+}
+
+/* slide-in-top 애니메이션 정의 */
+@-webkit-keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
